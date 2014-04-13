@@ -1,0 +1,199 @@
+@import "mixins";
+
+@containerWidth: 1150px;
+
+@media (min-width:@containerWidth) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+// general classes
+.less-important {
+  color: gray;
+}
+
+.highlight-warning {
+  background-color: orange;
+}
+
+.highlight-success {
+  background-color: lightgreen;
+}
+
+.back-button {
+  .right;
+}
+
+// show attributes
+.property-list {
+  .fieldcontain {
+    list-style-type: none;
+
+    .property-label {
+      display: inline-block;
+      width: 150px;
+      font-weight: bold;
+    }
+
+    .property-value {
+
+    }
+  }
+}
+
+#menu-container {
+  width: @containerWidth;
+
+  li.dropdown:hover ul.dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    margin-top: 0px;
+    background-color: #111111;
+    border-radius: 0 0 6px 6px;
+
+    &:after {
+      border-bottom: none;
+    }
+
+    a {
+      color: darkgray;
+
+      &:hover, &:focus {
+        color: white;
+        background-image: linear-gradient(to bottom, black, #aaaaaa);
+
+      }
+    }
+  }
+}
+
+#main-container {
+  width: @containerWidth;
+}
+
+.overview-box {
+  border: 1px solid black;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px lightgray;
+
+  height: 100%;
+
+  margin-top: 20px;
+  padding: 20px;
+
+  .list-margin {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#clicks-items, #message-items {
+  display: inline-block;
+}
+
+#click-history, #message-history {
+  display: inline-block;
+  float: right;
+  width: 250px;
+  height: 200px;
+}
+
+#add-message-chain {
+  li {
+    margin-left: 20px;
+  }
+}
+
+#data-cleaning-mini {
+  margin-top: 30px;
+  > div {
+    border-width: 3px;
+
+    .header {
+      margin-bottom: 10px;
+    }
+  }
+
+  #contact-to-clean {
+    td {
+      color: #000;
+      padding-right: 30px;
+    }
+  }
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px; /* half width of the spinner gif */
+  margin-top: -50px; /* half height of the spinner gif */
+  text-align: center;
+  z-index: 1234;
+  overflow: auto;
+  width: 300px; /* width of the spinner gif */
+  height: 302px; /*hight of the spinner gif +2px to fix IE8 issue */
+}
+
+.pagination-page-size {
+  margin-left: 20px;
+  display: inline-block;
+  height: inherit;
+  vertical-align: bottom;
+
+  > select {
+    display: inline-block;
+    width: 80px;
+    margin-bottom: 0;
+    padding: 0;
+    margin-right: 10px;
+  }
+}
+
+.dialog-window {
+  padding-top: 30px !important;
+}
+
+.progress {
+  margin-bottom: 0;
+
+  .bar {
+    display: block;
+    z-index: -10;
+  }
+
+  .progress-number {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+}
+
+.with-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+form {
+  label.required-indicator:after {
+    color: red;
+    content: "*";
+  }
+}
+
+select2-input-field {
+  min-width: 300px;
+}
+
+table{
+  td{
+    main-column: 60%;
+    info-column: 40%;
+  }
+}
